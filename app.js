@@ -17,7 +17,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 // Connect to MONGODB
-mongoose.connect("mongodb+srv://minhthaidj:ririthebest@cluster0.gaynr5j.mongodb.net/", () => {
+mongoose.connect(process.env.MONGO_URI, () => {
   console.log("Connected to Database!");
 });
 
